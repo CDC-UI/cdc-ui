@@ -1,2 +1,2 @@
-# cdc-ui
-Meeting notes, demo code, projects, website, and more for CDC@UI
+# Cyber Defense Club at the University of Idaho (CDC@UI)
+Meeting notes, Documents, cool things, and more for CDC@UI!
