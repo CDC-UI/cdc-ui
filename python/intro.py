@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+# ^ This is how linux (and possibly Darwin[OSX]) knows it's a Python script, allowing you to do "./intro.py"
+# Windows uses the file extension
+
 
 print 'Python says: "Hi, how are you today?"'
 
@@ -6,14 +9,18 @@ print 'Python says: "Hi, how are you today?"'
 # Function definition
 def example():
     """ This is an example function. """
-    pass  # Do nothing, equivilent to { } in C/C++
+    pass  # Do nothing, equivalent to { } in C/C++
 
 # def           Tells python you're defining a function
 # example       Name of the function
-# :             Start of the statement (in this case, a function definition statement)
-# ()            Arguments to the function (no arguments in this case)
-# """ blah """  Multi-line comment. When placed inside the function (there is a tab or 4 spaces), it is the functions docstring
-# pass          Expression that does nothing 
+# :             Start of a statement (in this case, a function definition statement)
+# ()            Function arguments (no arguments in this case)
+# """ blah """  Multi-line comment, known as a "docstring"
+# pass          Expression that does nothing
+
+
+# Functions must be defined before using them, so the following line wouldn't be valid
+# examine_artifact('C:\lol')
 
 def examine_artifact(artifact):
     from os import path  # From the OS library, import the path sub-module
@@ -26,9 +33,18 @@ with open("virus.txt", "r") as infectedFile:
 
 # with          Ensures the file object is closed when scope of the statement is left
 # open          Opens the file "virus.txt" as read-only ("r")
-# as            Assigns the result of the open to the variable infectedFile
+# as            Makes infectedFile the opened file object
+
+# Wait a second...where's the type?
+# In Python, there are types, but they're dynamically determined at runtime (known as "duck typing")
+# This allows some really cool stuff, but as with C, can be potentially dangerous if you're not careful
+print type(virus)
+print str(virus)
+print type(str(virus))
 
 # For loops over objects
+# In this case, virus is a "list" object
+# The for loop queries the object for each item, until it's out of objects
 for a in virus:
     print a
 
@@ -36,6 +52,7 @@ for a in virus:
 # Iterative for loop
 for i in range(0, 5):
     print i**2
+
 
 # List comprehension
 a = [i for i in range(0, 500, 100)]  # Generates a list of numbers using the for loop
@@ -49,7 +66,7 @@ print b
 huh = a + b
 print huh
 
-# Print a copy of the list object that is sorted
+# Print a sorted copy of the list object
 print sorted(huh)
 
 # Sort the list itself
@@ -58,20 +75,25 @@ print huh
 
 # String slicing (aka magic)
 string = "Hackers <3 Python"
-print string[0]
-print string[-1]
-print string[:7]
-print string[:4]
-print string[8:10]
-print string[3:14:3]
+print string[0]         # 1st character
+print string[-1]        # Last character
+print string[-2]        # Second to last character
+print string[:7]        # Everything up to the 8th character
+print string[:4]        # Everything up to the 4th character
+print string[8:10]      # 9th through 11th characters
+print string[3:14:3]    # Every 3 characters from 3rd to 14th character
 
 # Printing a string backward
-lol = "eminem"
+lol = 'eminem'
 print lol
 print lol[::-1]
 
+# Note we can use "" or '' for strings. Use whichever you want, unless you have ' or " in the string.
+hello = '"Hello!"'
+print hello
+
 # Strings are lists of characters, so you can sort them!
-print sorted(lol)
+print sorted(string)
 
 
 # You don't need a main. They are a good practice, however, to prevent overriding ("globbing") your global namespace
@@ -100,9 +122,17 @@ def main():
         for t in temp:
             print eval(t)
 
+    # Also, you can define a function wherever you please
+    def rogue():
+        print "I'm a rogue function!"
+
+    rogue()
+
 # __name__ is the label for the currently executing file. 
 # If it is the file that we begin executing from, that name is __main__
 # Otherwise, it would be intro
 # This is useful for testing classes/functions defined in other files independantly from the rest of the code
 if __name__ == '__main__':
     main()
+    # The following line, will error
+    # rogue()
