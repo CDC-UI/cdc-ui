@@ -1,5 +1,4 @@
-**/numbers.json
-**/logins.json
+*.json
 *.idea
 
 # Byte-compiled / optimized / DLL files
