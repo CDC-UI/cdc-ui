@@ -8,7 +8,7 @@
 
 # Notes about Ethics and Law
 * Accessing any system you do not have authorization to access is ILLEGAL. The laws regarding this can be quite strict, judges are not kind folks, and you could go to jail for a long time for hacking your friend's laptop as a joke.
-* We are learning skills that could potentially be used to do bad things™. Use your best judgement when learning and playing around with these skills. Use Virtual Machines to isolate yourself from the UI network, be careful read licence agreements before reverse engineering ("reversing") software, and above all: think before you click
+* We are learning skills that could potentially be used to do bad things™. Use your best judgement when learning and playing around with these skills. Use Virtual Machines to isolate yourself from the UI network, be careful read licence agreements before reverse engineering ("reversing") software, and above all: think before you click.
 * Rule of thumb: If you are profiting, using with malicious intent, or violating a law it is a bad thing™. Don't do it. Learn to become a cyber defender and protect those you love, not a basement script kiddie who's despised by all.
 * Act ethically. Again, use your best judgement. If it feels wrong to you, err on the side of caution. Do more research, bring it up at a meeting, ask us or another member.
 * This stuff is incredibly awesome, but like explosives, incredibly dangerous if used without proper safety or for the wrong reasons. 
