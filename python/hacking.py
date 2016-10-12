@@ -71,14 +71,17 @@ def main():
     pathName = 'firefox_profile\\'
 
     downloadDB = os.path.join(pathName, 'downloads.sqlite')
-    printDownloads(downloadDB)
+    if os.path.isfile(downloadDB):
+        printDownloads(downloadDB)
 
     cookiesDB = os.path.join(pathName, 'cookies.sqlite')
-    printCookies(cookiesDB)
+    if os.path.isfile(cookiesDB):
+        printCookies(cookiesDB)
 
     placesDB = os.path.join(pathName, 'places.sqlite')
-    printHistory(placesDB)
-    printGoogle(placesDB)
+    if os.path.isfile(placesDB):
+        printHistory(placesDB)
+        printGoogle(placesDB)
 
 if __name__ == '__main__':
     main()

@@ -2,6 +2,7 @@
 # ^ This is how linux (and possibly Darwin[OSX]) knows it's a Python script, allowing you to do "./intro.py"
 # Windows uses the file extension
 
+# from michael import switch
 
 print 'Python says: "Hi, how are you today?"'
 
@@ -18,11 +19,17 @@ def example():
 # """ blah """  Multi-line comment, known as a "docstring"
 # pass          Expression that does nothing
 
+def wrapper_function(f):
+    def wrapper():
+        f(blah)
+        return
+    return wrapper
 
 # Functions must be defined before using them, so the following line wouldn't be valid
 # examine_artifact('C:\lol')
-
+@wrapper_function
 def examine_artifact(artifact):
+    import os
     from os import path  # From the OS library, import the path sub-module
     return path.basename(artifact)  # Function call to os.path.basename, with the argument artifact
 
@@ -46,6 +53,9 @@ print type(str(virus))
 # In this case, virus is a "list" object
 # The for loop queries the object for each item, until it's out of objects
 for a in virus:
+    print a
+
+for a in "string":
     print a
 
 
@@ -90,6 +100,11 @@ print lol[::-1]
 
 # Note we can use "" or '' for strings. Use whichever you want, unless you have ' or " in the string.
 hello = '"Hello!"'
+hello1 = "'Hello'"
+''
+""
+""
+''
 print hello
 
 # Strings are lists of characters, so you can sort them!
