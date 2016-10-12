@@ -2,7 +2,7 @@
 
 1. I will not access or attempt to access anyone's (friends, university, etc.) computer or information without obtaining permission first. 
 2. I will learn how and why things work, so I can improve my knowledge and understanding. As I am able, I will learn with the intent of finding creative solutions to problems no one has solved yet, contributing to the community rather than dishonoring it with willful ignorance.
-3. I will respect all peoplez and not discriminate against anyone based on [pretend there's the typical long list of characteristics here].
+3. I will respect all people and not discriminate against anyone based on [pretend there's the typical long list of characteristics here].
 4. I will not teach what I learn here at CDC@UI to anyone who will misuse or abuse the knowledge and skills I've learned.
 
 
