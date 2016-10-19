@@ -5,7 +5,10 @@
 # https://www.nostarch.com/blackhatpython
 
 # Botnet Command and Control (Also commonly known as a "c2") framework utilizing GitHub
-# Requires Python 2.7
+# Download Python 2.7 x86 from here: https://www.python.org/ftp/python/2.7.12/python-2.7.12.msi
+
+# Get pyHook from: https://sourceforge.net/projects/pyhook/
+# Get pywin32 from: https://sourceforge.net/projects/pywin32/files/pywin32/Build%20220/pywin32-220.win32-py2.7.exe/download
 
 import json
 import base64

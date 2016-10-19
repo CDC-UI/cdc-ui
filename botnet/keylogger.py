@@ -3,6 +3,8 @@
 
 # Get pyHook from: https://sourceforge.net/projects/pyhook/
 # Get pywin32 from: https://sourceforge.net/projects/pywin32/files/pywin32/Build%20220/pywin32-220.win32-py2.7.exe/download
+# Download Python 2.7 x86 from here: https://www.python.org/ftp/python/2.7.12/python-2.7.12.msi
+
 
 from ctypes import *
 import pythoncom
